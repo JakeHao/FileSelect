@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             style="@style/app_bg">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/public_dividing_line1"
+            />
+
+        <ListView
+            android:id="@+id/lvFile"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:cacheColorHint="#00000000"
+            android:fadingEdge="none"
+            android:scrollbars="none"/>
+
+
+        <RelativeLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="#DC22292C"
+            android:layout_height="44dp">
+
+            <RelativeLayout
+                android:id="@+id/rlCurFile"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvCurFile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:textSize="16sp"
+                    android:paddingRight="10dp"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:drawableRight="@drawable/arrow"
+                    android:text="@string/txt_all_file"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvCheckSize"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/txt_check_file_size"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noDataView"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_no_file"
+        />
+</FrameLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FileSelect</string>
+
+    <string name="txt_all_file">全部文件</string>
+    <string name="txt_check_file_size">已选%s</string>
+    <string name="txt_check_file_num">确定(%d)</string>
+    <string name="txt_ext_file">扩展卡内存</string>
+    <string name="txt_sd_file">SD卡</string>
+    <string name="txt_no_file">当前文件夹下没有文件</string>
+    <string name="btn_confirm">确定</string>
+
+    <string name="dialog_public_title">温馨提示</string>
+    <string name="dialog_no_storage_permission_tip">无法访问存储空间，请检查是否已经打开存储权限</string>
+
+
+</resources>
