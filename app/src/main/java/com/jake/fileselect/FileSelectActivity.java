@@ -142,6 +142,8 @@ public class FileSelectActivity extends AppCompatActivity implements View.OnClic
         View view = MenuItemCompat.getActionView(menuItem);
         btnConfirm = (TextView)view.findViewById(R.id.btnConfirm);
         btnConfirm.setText(R.string.btn_confirm);
+        btnConfirm.setEnabled(false);
+        btnConfirm.setTextColor(getResources().getColor(R.color.c999999));
         btnConfirm.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -184,11 +186,13 @@ public class FileSelectActivity extends AppCompatActivity implements View.OnClic
                     mAdapter.notifyDataSetChanged();
                     if (mAdapter.getCheckedList().isEmpty())
                     {
+                        btnConfirm.setTextColor(getResources().getColor(R.color.c999999));
                         btnConfirm.setEnabled(false);
                         btnConfirm.setText(R.string.btn_confirm);
                     }
                     else
                     {
+                        btnConfirm.setTextColor(Color.BLUE);
                         btnConfirm.setEnabled(true);
                         btnConfirm.setText(String.format(getString(R.string.txt_check_file_num),
                                                          mAdapter.getCheckedList().size()));
